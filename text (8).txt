@@ -1,0 +1,64 @@
+now summerize this and understand this "SUZHI / KAMBI / SIKKU Kolam
+In the art form of SUZHI KOLAM/ KAMBI KOLAM, dots called pulli are arranged in
+rhombic, square, triangular, or free shapes, and a single, uninterrupted linear or curvilinear line,
+called the kambi, intertwines the dots. While there are no written or verbally stated rules. Listed
+some rules of pulli(dots) and kambi/Suzhi kolam from examining the designs (Yanagisawa,
+Nagata, Robinson Thamburaj). Rules can be added / removed.
+Rule 1: Uniformly spacing of dots
+Rule 2: Smooth drawing line around the dots
+Rule 3: Symmetry in drawings
+Rule 4: Straight lines are drawn inclined at an angle of 45 degrees
+Rule 5: Drawing lines never trace back
+Rule 6: Arcs adjoining the dots
+Rule 7 : Kolam is completed when all points are enclosed by the drawing line
+Kolam drawing can be treated as a special kind of a graph with the crossings considered
+as vertices and the parts of the kambi between vertices treated as edges. The only restriction is
+that unlike in a graph, these edges cannot be freely drawn as there is a specific way of drawing
+the kolam. The single kambi kolam will then be an Eulerian graph with the drawing starting and
+ending in the same vertex and passing through every edge of the graph only once. Single knot
+kolam also called as “ANTHATHI Kolam” in Tamil Nadu. The Smooth line starts at a point and
+end in the same point. Single knot kolam can be drawn for any type of dot structure (rhombic,
+square, triangular, or free shapes).
+L-System
+Lindermayer system is a parallel rewriting system and a type of formal grammar. It consists of
+an alphabet of symbols that can be used to make strings, a collection of production rules that
+expand each symbol into some larger string of symbols. 
+The recursive nature of L system rules leads to self similarity and thereby fractal like forms are
+easy to describe with an L system. This nature is applied in generating kolam pattern. Kolam
+pattern becomes more complex by increasing the iteration level.
+Software: Python Turtle Graphics
+Applying L-System for Kolam pattern Generation:
+Procedure:
+Axiom or Initiator: FBFBFBFB
+Rules: A  AFBFA
+ B  AFBFBFBFA
+Angle: 45o
+From current cursor position ,
+F  Forward 10 units (draw a line 10 units length)
+A  Draw an arc (circle (10, 90))
+B  Calculate forward units I = 5/sqrt (2)
+ Forward I Units
+ Draw an arc (circle (I, 270))
+ Forward I Units
+Execution:
+0
+TH Iteration : FBFBFBFB // Initiator
+1
+ST Iteration : F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA
+ // apply the rule B  AFBFBFBFA
+2
+ND Iteration : F AFBFA F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA F AFBFA
+ F AFBFA F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA F AFBFA
+ F AFBFA F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA F AFBFA
+ F AFBFA F AFBFBFBFA F AFBFBFBFA F AFBFBFBFA F AFBFA
+ // apply the rule A  AFBFA B  AFBFBFBFA
+ and so on… "
+
+
+Summary:
+
+SUZHI / KAMBI / SIKKU Kolam is an art form where dots (pulli) are arranged in various shapes, and a continuous line (kambi) intertwines the dots. The rules for creating these designs include uniformly spacing the dots, drawing smooth lines around the dots, maintaining symmetry, drawing straight lines at a 45-degree angle, avoiding line tracing, and incorporating arcs between the dots. The kolam is considered complete when all points are enclosed by the drawing line. The process of creating kolam can be seen as a graph, with crossings as vertices and the kambi sections as edges. The kolam is a special type of graph known as an Eulerian graph, where the drawing starts and ends at the same vertex and passes through every edge only once. Single knot kolam, also known as "ANTHATHI Kolam" in Tamil Nadu, refers to a smooth line that starts and ends at the same point and can be drawn for any dot structure.
+
+L-System, or Lindermayer system, is a type of formal grammar used for generating strings of symbols. It consists of an alphabet of symbols and production rules that expand each symbol into a larger string. The recursive nature of L-system rules allows for self-similarity and the generation of fractal-like forms, which is applied in generating kolam patterns. The complexity of the kolam pattern increases with each iteration level.
+
+The software used for generating kolam patterns is Python Turtle Graphics. The procedure involves an axiom or initiator string (FBFBFBFB), rules for symbol expansion (A → AFBFA, B → AFBFBFBFA), and an angle of 45 degrees. The execution of the L-system involves interpreting the symbols: F represents moving forward by 10 units, A represents drawing an arc (circle with a radius of 10 and an angle of 90 degrees), B calculates a forward unit (I) and then moves forward by I units, and so on. Each iteration applies the production rules to expand the axiom, resulting in more complex kolam patterns.
